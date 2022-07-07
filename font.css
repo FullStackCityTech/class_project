@@ -1,0 +1,23 @@
+@font-face {
+	font-family: “Roboto”;
+	src: url(“Roboto/Roboto-Regular.ttf”)
+}
+
+p {
+    font-family: "Roboto";
+    font-family: 'Mingzat', sans-serif;
+    font-family: 'Finlandica', sans-serif;
+}
+
+i {
+    font-size: 30px;
+    color:rgb(65, 69, 68);
+}
+
+.green {
+    color: green;
+}
+
+#apple {
+    color: red;
+}
