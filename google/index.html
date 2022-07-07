@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        * {
+            /* border: 1px solid blue; */ 
+        }
+
+        html, body {
+            height: 100%;
+            overflow: hidden;
+        }
+
+        #logo {
+            margin-top: 20%;
+            margin-left: auto;
+            margin-right: auto;
+            width: 272px;
+        }
+
+        #leftMenu {
+            float: left;
+        }
+
+        #rightMenu {
+            float: right;
+        }
+
+        .menu {
+            padding: 20px;
+        }
+
+        #goog {
+            float: right;
+        }
+
+        form {
+            /*text-align: center;*/
+            width: 400px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        #search {
+            margin-top: 20px;
+            margin-bottom: 20px;
+            border-radius: 20px;
+            width: 400px;
+            height: 30px;
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        .submitButton:hover {
+            border: 1px solid gray;
+        }
+
+    </style>
+</head>
+<body>
+    
+    <div id="leftMenu" class="menu">
+        <a href="">About</a>
+        <a href="">Store</a>
+    </div>
+
+    <div id="rightMenu" class="menu">
+        <a href="">Gmail</a>
+        <a href="">Images</a>
+    </div>
+    
+    <div id="logo">
+        <img src="google.png">
+    </div>
+
+
+    <form>
+        <input type="text" id="search"> <br>
+
+        <input type="submit" class="submitButton" value="Google Search"> 
+        <input type="submit" class="submitButton" value="I'm Feeling Lucky"> 
+
+    </form>
+
+
+    <div>
+        <img src="google.png" id="goog">
+
+        <p>What is Lorem Ipsum?
+            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsu</p>
+    </div>
+
+</body>
+</html>

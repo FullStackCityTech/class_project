@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zara</title>
+
+    <style>
+html {
+    height: 100%;
+}
+
+        body {
+            height: 100%;
+            overflow: hidden;
+
+            background-image: url('background.jpg');
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+
+        #go {
+            color: white;
+            background-color: black;
+            cursor: pointer;
+            padding: 6px;
+        }
+
+        #go:hover {
+            background-color: rgba(82, 78, 78, 0.203);
+            padding: 8px;
+        }
+
+        #thisForm {
+            margin-left: 10%;
+            margin-top: 50%;
+        }
+
+        select {
+            font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        }
+
+
+    </style>
+</head>
+<body>
+    
+    <form id="thisForm">
+
+        <select id="country">
+            <option>USA</option>
+            <option>Canada</option>
+            <option>UK</option>
+            <option>Brazil</option>
+            <option>China</option>
+        </select>
+
+        <select id="language">
+            <option>English</option>
+            <option>Spanish</option>
+        </select>
+
+        <a href="https://www.zara.com/"><button id="go">GO</button></a>
+    
+    </form>
+
+
+</body>
+</html>
