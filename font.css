@@ -20,6 +20,12 @@ p {
     word-wrap: break-word;
 }
 
+@media screen and (max-width: 768px) {
+    p {
+        font-size: 2rem;
+    }
+}
+
 span {
     font-size: 1.3rem; /* root em */
 }
@@ -28,6 +34,13 @@ a {
     font-size: 1rem;
     font-size: 2rem ;
 }
+
+@media screen and (max-width: 768px) {
+    a {
+        font-size: 2rem;
+    }
+}
+
 
 i {
     font-size: 3rem;
@@ -54,4 +67,57 @@ a {
 .video_player {
     width: 100%;
     opacity: 0.5;
+}
+
+
+
+
+@media screen and (max-width: 768px) {
+    .video_player {
+        border: 10px solid red;
+    }
+
+    body {
+        background-color:cadetblue;
+    }
+
+    p {
+        font-size: 2.5rem;
+    }
+}
+
+
+@media screen and (max-width: 414px) {
+    .video_block {
+        text-align:center;
+    }
+    .video_player {
+        width: 90%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    body {
+        background-color:blanchedalmond;
+    }
+
+    p {
+        font-size: 3rem;
+    }
+}
+
+
+@media screen and (max-width: 375px) {
+
+    body {
+        background-color: beige;
+    }
+
+    p {
+        font-size: 4rem !important;
+    }
+
+    .video_player {
+        border: 10px solid rgb(50, 27, 120);
+    }
 }
