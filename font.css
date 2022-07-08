@@ -3,14 +3,34 @@
 	src: url(“Roboto/Roboto-Regular.ttf”)
 }
 
+html {
+    font-size: 12px;
+    margin: 0px;
+}
+
+body {
+    margin: 0px;
+}
+
 p {
     font-family: "Roboto";
     font-family: 'Mingzat', sans-serif;
     font-family: 'Finlandica', sans-serif;
+    font-size: 2rem; /*root em*/
+    word-wrap: break-word;
+}
+
+span {
+    font-size: 1.3rem; /* root em */
+}
+
+a {
+    font-size: 1rem;
+    font-size: 2rem ;
 }
 
 i {
-    font-size: 30px;
+    font-size: 3rem;
     color:rgb(65, 69, 68);
 }
 
@@ -20,4 +40,18 @@ i {
 
 #apple {
     color: red;
+}
+
+a {
+ font-size: 2rem !important;
+}
+
+.video_block {
+    width: 100%;
+    margin: 0px;
+}
+
+.video_player {
+    width: 100%;
+    opacity: 0.5;
 }
