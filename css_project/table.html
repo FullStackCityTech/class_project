@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+#overflowTest {
+  background: #4CAF50;
+ 
+  padding: 15px;
+  width: 50%;
+  height: 100px;
+  overflow: hidden;
+  border: 1px solid #ccc;
+  cursor:not-allowed;
+}
+
+    </style>
+</head>
+<body>
+    
+    <div id="overflowTest" >
+
+        This text is really long and the height of its container is only 100 pixels. Therefore, a scrollbar is added to help the reader to scroll the content. Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi. Nam liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming id quod mazim placerat facer possim assum. Typi non habent claritatem insitam; est usus legentis in iis qui facit eorum claritatem.
+
+    </div>
+
+
+    <p>&nbsp;</p>
+    <!-- this is a table of links -->
+
+    <table border="3" cellspacing="8" cellpadding="10">
+        <thead>
+            <tr>
+                <th colspan="2">GoT contents</th>
+                <th >col 2</th>
+                <th>col 3</th>
+            </tr>
+        </thead>
+
+        <tbody>
+            <tr>
+                <td colspan="2" align="right">
+                    <a href="novel.html#intro">Intro</a> <!-- Intro to GoT -->
+                </td>
+                <td>
+                    <a href="novel.html#kings_landing">Kings Landing</a>
+                </td>
+                <td>
+                    <a href="folder/form.html">Form.html</a>
+                    <a href="folder/form1.html">Form1.html</a>
+                    <img src="folder/cat.png" width="200px">
+                </td>
+            </tr>
+            <tr>
+                <td>5866758788 </td>
+                <td>978989870880 </td>
+                <td rowspan="2" valign="top" align="left">7777777777</td>
+                <td rowspan="2" valign="center" align="center">row 3  </td>
+                <td rowspan="2" valign="bottom" align="right">row 3  </td>
+            </tr>
+            <tr>
+                <td>row 3 </td>
+                <td>row 3 </td>
+                
+            </tr>
+
+        </tbody>
+       <tfoot>
+            <tr> 
+                <td align="center">footer</td>
+                <td colspan="2" align="right">footer</td>
+                <td align="center">footer</td>
+            </tr>
+       </tfoot>
+
+    </table>
+
+</body>
+</html>

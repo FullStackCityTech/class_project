@@ -1,0 +1,51 @@
+.ooo {
+    border: 1px solid crimson;
+    width: 500px;
+    height: 200px;
+    overflow: auto;
+}
+
+#kings_landing {
+    border-radius: 40px;
+}
+
+#hand {
+    border: 10px dashed rgb(23, 139, 45);
+}
+
+#dothraki {
+    font-size: 30px;
+    text-decoration: none;
+
+    font-weight: bold;
+    font-weight: lighter;
+}
+
+a { /* all anchors */
+    text-decoration: none;
+}
+
+.yesUnderline { /* class */
+    text-decoration: underline; 
+}
+
+div p {
+    color:rgb(85, 42, 164);
+}
+
+div p a { 
+    color:rgb(202, 147, 44);
+}
+
+div > p {
+    color:rgb(141, 164, 28);
+    background-color:rgb(208, 38, 165);
+}
+
+div > a {
+
+}
+
+div > .anything {
+    background-color:rgb(64, 186, 226);
+}

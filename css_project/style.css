@@ -1,0 +1,38 @@
+p {
+    /* color: brown;
+    fdffdfdfd
+    kkdfkfkd d 
+    */
+    text-align: right;
+    color:rgb(135, 64, 31); 
+    font-size: 20px;
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+.Orandel {
+    color:crimson;
+    background-color:rgb(227, 227, 243);
+    border-radius: 50px;
+}
+
+.Erik {
+    color: #FFFFFF;
+    background-color: rgb(12, 5, 30);
+    font-size: 12px;
+}
+
+.Reagan {
+    border: 2px solid #210505;
+    width: 90%;
+    box-shadow: 30px 40px rgb(33, 48, 161);
+    /* x-axis (right) y-axis (top) color */
+    border-radius: 19px;
+}
+
+.Stephanie {
+    width: 90%; 
+/*    border: 5px dotted red;*/
+    /* solid dashed dotted double groove ridge inset outset none */
+    text-align: center;
+
+}
