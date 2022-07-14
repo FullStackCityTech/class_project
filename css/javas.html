@@ -7,6 +7,12 @@
     <meta name='viewport' content='width=device-width, initial-scale=1'>
 
     <script src='main.js'></script>
+<style>
+    .warning {
+        border: 3px dashed red;
+        font-size: 40px;
+    }
+</style>
 
     <script>
         var xx = "fffff kkkkkk hhhhh"; //string
@@ -34,9 +40,66 @@
 
         console.log(strall);
 
+       //  alert( strall ); // 
+       //  var user = confirm( strall ); //ok cancel = true or false
+
+      //  console.log(user); //true or false = boolean
+        //integer string boolean
+
+        //var password = prompt( 'enter your password' ); //
+        //console.log(password);
+
+        // 'ijijiji'     "nnnn''nnnnn"
+        document.write( '<p>ingjigfngjignfjgonfongf</p><a href="">link</a>' );
+       
+        document.write('<div>gggggggggg' + str1 + '</div>'); 
+
+        var has_car = false;
+
+        if ( has_car ) { // 
+            console.log('travel anywhere');
+        } //
+        else { //   
+            console.log('subway');
+        }
+
+        var have_car = true;
+        var have_gas = true;
+
+        if (have_car && have_gas) { //and = both are true
+      /*      console.log('travel anywhere in the country');
+            document.write('<div class="warning">travel anywhere in the country</div>');*/
+        }
+/*        else {
+            console.log("can`t go");
+            document.write("<div class='warning'>can`t go</div>");
+        }
+*/        
+/*
+        have_car = confirm('do you have a car?');
+        //have_gas = confirm....
+        console.log(have_car);
+
+        if(have_car ) {
+            console.log('travel anywhere in the country');
+            document.write('<div class="warning">travel anywhere in the country</div>');
+
+            document.write('<img src="picture.png">');
+        }
+*/
+        have_car = false;
+        var access_subway = false;
+
+        if (have_car || access_subway) {
+            document.write('<div class="warning">go to manhattan</div>');
+        }
+
+
     </script>
 </head>
 <body>
     
+    <p>jjhkhkhkhkh</p>
+
 </body>
 </html>
