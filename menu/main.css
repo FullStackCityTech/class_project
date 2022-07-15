@@ -1,0 +1,64 @@
+.pp {
+    margin: 30px;
+    padding: 20px;
+    border: 4px solid red;
+}
+
+.desktop_only {
+    display: block; 
+}
+
+.mobile_only {
+    display: none;
+}
+
+.randy {
+    width: 300px; height: 300px;
+    border: 1px solid black;
+    background-size: contain;
+    background-image: url('randy1.png');
+}
+
+.menu_mobile {
+    display: none;
+}
+
+@media screen and (max-width: 500px) {
+    .desktop_only {
+        display: none;
+    }
+
+    .mobile_only {
+        display: block;
+    }
+
+    .randy {
+        background-image: url('randy2.png');
+    }
+
+    .menu {
+        display: none;
+    }
+
+    .menu_mobile {
+        display: block;
+    }
+
+    .menu_mobile ul {
+        list-style-type: none;
+        padding-left: 0;
+        background-color: black;   
+        color: white;
+        font-weight: bold;
+    }
+
+    .menu_mobile li {
+        padding: 20px;
+        border: 1px solid black;
+    }
+
+    .menu_mobile li a {
+        color: white;
+    }
+
+}
