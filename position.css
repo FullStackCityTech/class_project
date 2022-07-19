@@ -59,10 +59,18 @@
     position: relative;
 }
 
+.fa-solid {
+    cursor: pointer;
+}
+
 .fa-magnifying-glass {
     position: absolute;
     top: 16px;
     right: 2px;
 }
 
-
+.fa-microphone-lines {
+    position: absolute;
+    top: 16px;
+    left: 10px;    
+}
