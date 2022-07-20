@@ -78,14 +78,32 @@ document.write('<br>');
 var have_passport; 
 have_passport = false;  
 
+
 var airplane_ticket = false;
 
-if (airplane_ticket) {
+if (airplane_ticket) { //true
     document.write('travel to 27 countries'); 
 }
+else { //false
+    document.write('travel to 0 countries'); 
+}
 
-var passport_year = 2040; //
 
-if(passport_year >= 2022) { 
-    document.write('passport is valid'); 
+var passport_year = 2000; // 
+document.write(passport_year); 
+
+if(passport_year >= 2022) { //
+    document.write(' passport is valid'); 
+}
+else { //false
+    document.write(' passport is not valid'); 
+}
+
+var html = true; 
+var css = true; 
+var javascript = true; 
+
+if(html && css) { //F
+    //true && true = true
+    //true && false = false
 }
