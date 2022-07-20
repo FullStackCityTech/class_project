@@ -66,11 +66,11 @@
 .fa-magnifying-glass {
     position: absolute;
     top: 16px;
-    right: 2px;
+    left: 10px;   
 }
 
 .fa-microphone-lines {
     position: absolute;
     top: 16px;
-    left: 10px;    
+    right: 2px; 
 }
