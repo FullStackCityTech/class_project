@@ -100,10 +100,83 @@ else { //false
 }
 
 var html = true; 
-var css = true; 
+var css = false; 
 var javascript = true; 
 
 if(html && css) { //F
     //true && true = true
     //true && false = false
+}
+
+
+if(html && css && javascript) { /* boolean */
+    console.log('wow you are so advanced');  
+} 
+else if (html && css) {
+    console.log('wow you know front end design');
+} 
+else if (html & javascript) { //
+    console.log('you know html & javascript');
+}
+else if (css & javascript) {
+    console.log('you know css & javascript');
+}
+else { 
+    console.log('start sutdying');
+}
+
+
+var spain = true;
+var italy = false;
+var china = false;
+var japan = true;
+
+if (spain || italy) { // || = or
+    console.log('you\'ve been to europe');
+}
+else if (japan) {
+    console.log('you are a weeb');
+}
+else if (china) {
+    console.log('you have been to asia');
+}
+else { 
+    console.log('you\'ve not been to anywhere');
+}
+
+var canada = true; //
+
+
+
+console.log('canada: ' + canada + ' !canada: ' + !canada);
+
+if(!canada) { //true
+
+} 
+//else {
+//    console.log('you are not cold ' + canada);
+//}
+
+var population = 50; 
+var houses = 20;
+var trees = true;
+
+if( (houses < population) && trees) { //true && true
+    console.log('homeless & forest');
+}
+else { 
+    console.log('good'); 
+}
+
+var water_have = 88;
+var water_need = 100;
+
+if (water_have != water_need) {
+    console.log('thirsty');
+}
+
+var chaos_emeralds = 8; 
+
+if(chaos_emeralds != 7) {
+    console.log('NOT super sonic');
 }
