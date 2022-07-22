@@ -168,7 +168,7 @@ else {
     console.log('good'); 
 }
 
-var water_have = 88;
+var water_have = 88; 
 var water_need = 100;
 
 if (water_have != water_need) {
@@ -180,3 +180,4 @@ var chaos_emeralds = 8;
 if(chaos_emeralds != 7) {
     console.log('NOT super sonic');
 }
+
