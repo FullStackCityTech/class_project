@@ -181,3 +181,10 @@ if(chaos_emeralds != 7) {
     console.log('NOT super sonic');
 }
 
+
+
+var thisOne = document.getElementById('thisOne');
+console.log(thisOne);
+
+thisOne.style.color="blue";
+thisOne.style.fontSize="30px";
