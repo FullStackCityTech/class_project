@@ -146,3 +146,28 @@ switch('ss2') {
     default:
         console.log('you suck');
 }
+
+for (var y = 1; y <= 20; y++) { //1 to 20
+    console.log(y);
+
+   //if(y == 8)
+     //   break; //break loop
+    if(y % 2 == 0) {
+        document.write(y + ' is even '); 
+    }
+
+}
+
+//% modulo 
+var num1 = 7;  
+
+document.write('<br><br>');
+
+if(num1 % 2 == 0) { //even
+    document.write(num1 + ' is even');
+}
+else { //odd
+
+    document.write(num1 + ' is odd');
+}
+
