@@ -79,3 +79,70 @@ for(var s = 0; s < sales.length; s++) {
     inv = inv - sales[s];
 }
 console.log('inv: ' + inv);
+
+
+var people = 9; 
+switch(people) {
+    case 10: 
+        console.log('good');
+        break;
+    case 2: 
+        console.log('twos company');
+        break;
+    case 3:
+        console.log('threes a crowd');
+        break;
+    default:
+        console.log('thats nice');
+}
+
+/* if(people == 1)
+else if(people == 2)
+else if(people == 3)
+else 
+*/
+
+var favoriteAnime = 'kimi no na wa';
+
+switch(favoriteAnime) {
+    case 'dbz':
+        console.log('over 9000');
+        break;
+    case 'codegeass':
+        console.log('obey me');
+        break; 
+    case 'bobs burgers':
+        console.log('bobs burgers');
+        break; 
+
+    default: 
+        console.log('never heard of it');
+}
+
+
+var power_levels = ['normal', 'ss', 'ss2', 'ss3', 'ss_red', 'ss_blue'];
+
+var current_power_level = power_levels[1];
+
+switch('ss2') {
+
+    case 'ss3':
+        console.log('long hair');  
+    case 'ss2': 
+        console.log('electricity');
+    case 'ss':
+        console.log('yellow hair');  
+ 
+        break;  
+
+    case 'ss_red':
+        console.log('hair not yellow anymore');  
+    case 'ss_blue':
+        console.log('god levels');  
+    
+        break;
+
+    case 'normal': 
+    default:
+        console.log('you suck');
+}
