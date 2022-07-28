@@ -22,6 +22,9 @@
 
         }
     </style>
+    <script>
+
+    </script>
 </head>
 <body id="body">
 
@@ -42,15 +45,26 @@
 
     <p id="nonsense">gubgufgfuhbghf dfidfbdjnidjfnjidjdkofkgfk</p>
 
+    <button onclick="showAlert()" id="clickme">click me</button>
+
     
  <!--
     <script src='main.js'></script>
     
-    <script src='logic.js'></script>
+   <script src="element.js"></script>
     
  -->
+ <script src='logic.js'></script>
+   <script>
+    console.log('outside of file' + numCars);
     
-    <script src="element.js"></script>
+    
+    
+function showAlert(){
+    console.log('clickme');
+    document.getElementById('clickme').style.backgroundColor = 'green';
+}
+   </script>
  
 </body>
 </html>

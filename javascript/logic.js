@@ -27,6 +27,7 @@ while (buyCar != 'toyota');
 var x = 1;
 switch(x) {
     case 2:
+        var scope = 'ppppppp';
         console.log('twos company');
         break;
     case 3:
@@ -37,8 +38,20 @@ switch(x) {
 }
 
 
-function showCar () {
-    console.log('car');
+console.log('scope variable ' + scope);
+
+function showCar (numCars) {
+    var typeCar = 'm';
+    console.log(numCars + ' ' + typeCar);
 }
 
-showCar();
+
+function showCar1 (numCars) {
+     
+    document.getElementById('clickme').style.backgroundColor = 'blue';
+}
+
+var numCars = 2;
+showCar(numCars);
+
+showCar1(numCars);

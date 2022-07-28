@@ -155,6 +155,9 @@ for (var y = 1; y <= 20; y++) { //1 to 20
     if(y % 2 == 0) {
         document.write(y + ' is even '); 
     }
+    else {
+        document.write(y + ' is odd '); 
+    }
 
 }
 
@@ -170,4 +173,3 @@ else { //odd
 
     document.write(num1 + ' is odd');
 }
-
