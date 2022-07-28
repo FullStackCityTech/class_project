@@ -5,13 +5,25 @@
     <meta http-equiv='X-UA-Compatible' content='IE=edge'>
     <title>B E W D</title>
     <meta name='viewport' content='width=device-width, initial-scale=1'>
+ 
+    <style>
+        .cat {
+            width: 200px;
+        }
 
-    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+        .cat:hover {
+            color: black;
+            border-radius: 10px;
+        }
+    </style>
 
     <link rel="icon" type="image/x-icon" href="blue.ico">
 </head>
 <body>
+
+    <button onclick="show_W_H()">click me for width and height</button>
     
+    <img src="glass_2.jpg" onclick="cat()" class="cat">
 
     <script src='main.js'></script>
 </body>
