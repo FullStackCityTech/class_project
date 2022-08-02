@@ -49,6 +49,9 @@
                 </td>
             </tr>
         </table>
+
+        <select id="state">
+        </select>
  
 
     <script>
@@ -75,6 +78,25 @@
 
            document.getElementById('total_after_taxes').innerHTML = total_after_taxes;
         }
+
+        var stateNames = ['NY', 'NJ', "PA", 'FL', 'CA'];
+        //stateNames.length stateNames[4]
+
+        var allOptions = '';
+        for(var s = 0; s < stateNames.length; s++ ){
+           
+            thisOption = '<option>' + stateNames[s] + '</option>';
+
+            allOptions = allOptions + thisOption;
+
+            console.log( allOptions );
+
+        }
+
+        document.getElementById('state').innerHTML =  allOptions;
+       
+
+
 
 
         var d = new Date(); //  
