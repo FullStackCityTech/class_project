@@ -8,12 +8,16 @@
  
     <style>
         .cat {
-            width: 200px;
+            width: 30%;
         }
 
         .cat:hover {
             color: black;
             border-radius: 10px;
+        }
+
+        iframe {
+           /* display: none;*/
         }
     </style>
 
@@ -22,8 +26,29 @@
 <body>
 
     <button onclick="show_W_H()">click me for width and height</button>
+
     
-    <img src="glass_2.jpg" onclick="cat()" class="cat">
+    <p id="text"></p>
+
+    
+    <img src="glass_2.jpg" onclick="cat()" class="cat" alt="cat 1">
+
+    <p id="iii"> </p>
+
+
+    <p id="p1">hhhhhhh llllll ooooo uuuuu </p>
+
+    <p id="p2"></p>
+
+    <p id="p3"></p>
+
+
+    <div><button id="showCat" onclick="showHideCat()">show the cat</button>
+    </div>
+
+    <div id="theCat"></div>
+
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/yK0P1Bk8Cx4?controls=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
     <script src='main.js'></script>
 </body>
