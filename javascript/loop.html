@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Page Title</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+
+</head>
+
+<body>
+    <div id="demo"></div>
+
+     
+        <table>
+            <tr>
+                <th>quantity</th>
+                <th>cost</th>
+                <th>subtotal</th>
+            </tr>
+            <tr>
+                <td>
+                    <!-- text number password -->
+                    <input type="number" id="quantity">
+                </td>
+                <td>
+                    $<input type="number" id="cost">
+                </td>
+                <td> 
+                    $<span id="subtotal">0.00</span>
+                   
+                </td>
+            </tr>
+            <tr>
+                <td colspan="3" align="right">shipping cost: $2.99<br>
+                New subtotal: $<span id="shipping">0.00</span></td>
+            </tr>
+            <tr>
+                <td colspan="3" align="right">
+                    taxes: 8% <br>
+                    Total: $ <span id="total_after_taxes">0.00</span> 
+                </td>
+            </tr>
+            <tr>
+                <td colspan="3" align="center">
+                    <button onclick="calc()">Calculate Subtotal</button>
+                </td>
+            </tr>
+        </table>
+ 
+
+    <script>
+        function calc() {
+ 
+            var quantity = document.getElementById('quantity').value;
+          //  console.log(quantity);
+            var cost = document.getElementById('cost').value;
+          ///  console.log(cost);
+
+            var subtotal = quantity * cost;
+          //  console.log(subtotal);
+
+            document.getElementById('subtotal').innerHTML = subtotal;
+
+            var shippingCost = 2.99;
+            var subtotal_after_shipping = subtotal + shippingCost;
+
+           document.getElementById('shipping').innerHTML = subtotal_after_shipping;
+
+           //subtotal * 0.08 .... subtract from subtotal
+
+           var total_after_taxes = subtotal - (subtotal * 0.08); 
+
+           document.getElementById('total_after_taxes').innerHTML = total_after_taxes;
+        }
+
+
+        var d = new Date(); //  
+        document.getElementById("demo").innerHTML = d.toDateString();
+
+        var d1 = new Date(2018, 0, 15, 22, 59);
+        //year month day hour minutes seconds
+       // document.getElementById("demo").innerHTML = d1;
+    </script>
+</body>
+
+</html>
