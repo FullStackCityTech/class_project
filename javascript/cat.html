@@ -33,7 +33,9 @@
 
     <p class="changeColor">hjiijnookp[[[[][p[--poijioj iji jnjijnjijj ij </p>
 
+    <p class="summary changeColor">trjgofmgkk ffngknrjighjgity8i5jn67itgbhgrjijtij ijigjkmgihjgkgkkkgofmgokgfgonk</p>
 
+    <p class="summary changeColor">jijgfigjjgijg gjgifjgigjfgjigf ggghjrigjhjijhhtjgbnjfjngj fjithu5jy</p>
 
     <script>
       
@@ -47,11 +49,11 @@
 
 //        paragraph[0].style.color = 'rgb(221, 115, 159)';
 
-        console.log( paragraph[0] );
+      //  console.log( paragraph[0] );
        
-        console.log(  paragraph[1] );
+     //   console.log(  paragraph[1] );
        
-        console.log(  paragraph[2] );
+     //   console.log(  paragraph[2] );
        
 
         var allParagraphs = document.getElementsByTagName('p');
@@ -70,9 +72,18 @@
             allImages[p].style.border = '10px solid black';
         }
 
-        allImages[0].style.border = '10px solid black';
-        allImages[1].style.border = '10px solid black';
 
+        var changeColorSummary = document.getElementsByClassName('summary changeColor');
+
+        console.log(changeColorSummary[0]);
+
+        for ( p = 0; p < changeColorSummary.length; p++){
+            console.log(changeColorSummary[p]);
+
+            changeColorSummary[p].style.fontSize = '40px';
+        }
+
+        
     </script>
 </body>
 </html>
