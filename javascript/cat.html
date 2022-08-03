@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Page Title</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    
+    <style>
+        img {
+            width: 50%; 
+            height: 400px;
+            cursor: pointer;
+        }
+
+    </style>
+</head>
+<body>
+
+    <img src="cat_3.jpg" name="cat" id="catpic" onmouseover="cat.src = 'cat_4.jpg';" onmouseout="cat.src = 'cat_3.jpg';">
+    
+    <img src="glass_2.jpg" name="glass" onmouseover="glass.src='glass_3.jpg'" onmouseout="glass.src='glass_2.jpg'"> 
+
+
+    <script>
+        function changeImg () {
+            cat.src = 'cat_4.jpg';
+        }   
+
+        function changeImg2() {
+            cat.src = 'cat_3.jpg';
+        }
+             
+        //document.getElementById('cat').src = '....';
+        
+
+    </script>
+</body>
+</html>
