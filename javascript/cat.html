@@ -11,6 +11,8 @@
             width: 50%; 
             height: 400px;
             cursor: pointer;
+            color:rgb(221, 115, 159);
+            font-weight: bold;
         }
 
     </style>
@@ -22,17 +24,54 @@
     <img src="glass_2.jpg" name="glass" onmouseover="glass.src='glass_3.jpg'" onmouseout="glass.src='glass_2.jpg'"> 
 
 
-    <script>
-        function changeImg () {
-            cat.src = 'cat_4.jpg';
-        }   
+    <p>gjgngfjf fjfnjfnjfjknbg ffijngjifjnjnifgnjgfjngfngk</p>
 
-        function changeImg2() {
-            cat.src = 'cat_3.jpg';
+
+    <p class="changeColor">hkghogkhkg rgojgfgjhgf kfokbjgkfgkjgkfgjgifjgg </p>
+
+    <p class="changeColor">455554 5  kopk mk k oj j o j ji ij ij h 8 hi hi h ij  j j t956i5yhi</p>
+
+    <p class="changeColor">hjiijnookp[[[[][p[--poijioj iji jnjijnjijj ij </p>
+
+
+
+    <script>
+      
+              
+        var paragraph = document.getElementsByClassName('changeColor');
+        //paragraph is an array! 
+
+        for (var p = 0; p < paragraph.length; p++ ){
+           paragraph[p].style.color = 'rgb(221, 115, 159)';
         }
-             
-        //document.getElementById('cat').src = '....';
+
+//        paragraph[0].style.color = 'rgb(221, 115, 159)';
+
+        console.log( paragraph[0] );
+       
+        console.log(  paragraph[1] );
+       
+        console.log(  paragraph[2] );
+       
+
+        var allParagraphs = document.getElementsByTagName('p');
         
+        allParagraphs[0].style.fontWeight = 'bold';
+
+        
+        for ( p = 0; p < allParagraphs.length; p++ ){
+            allParagraphs[p].style.fontWeight = 'bold';
+        }
+
+        var allImages = document.getElementsByTagName('img');
+
+          
+        for ( p = 0; p < allImages.length; p++ ){
+            allImages[p].style.border = '10px solid black';
+        }
+
+        allImages[0].style.border = '10px solid black';
+        allImages[1].style.border = '10px solid black';
 
     </script>
 </body>
