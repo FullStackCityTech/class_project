@@ -31,25 +31,89 @@
             height: 200px;
         }
 
+        .bgcolor {
+            background-color: green;
+        }
     </style>
 </head>
 <body>
 
 <?php 
-$col = 12;
+$colA = 6;
+
+$colB = 12 - $colA;
 
 ?>
 
    
     <div class="container">
       <div class="row">
-        <div class="col-lg-<?php echo $col?>">
+        <div class="col-lg-<?php echo $colA?>">
           bootstrap columns
         </div>
+        <div class="col-lg-<?php echo $colB?>">
+          bootstrap columns
+        </div>
+      </div>
+
+      <div class="row">
+        <?php
+    //errors warnings notices
+        error_reporting(0);
+
+        for($count = 1; $count < 13; $count++) {
+
+            if($count % 2 == 0) { //even
+                $class = "bgcolor";
+            } 
+            else { //odd
+                $class = "";
+            }
+            
+            echo " <div class='col $class '>col $count </div>";
+        } 
+        
+        ?>
+      
       </div>
     </div>
 
 
+    <?php
+
+        $favoriteAnime = 'bobs burgers111111111';
+
+        switch($favoriteAnime) {
+            case "code geass":
+                echo "obey me";
+                break;
+            case 'bobs burgers':
+                print('bobs burgers');
+                break;
+            case 'dbz':
+                print('over 9000');
+                break;
+            default: 
+                echo " never heard of it";
+        }
+
+    ?>
+
+
+    <script>
+
+        //1 to 12
+        for (  var count = 0;
+        count < 13; 
+        count++ ) {
+
+            console.log(count);
+        }
+
+ 
+
+
+    </script>
 
 </body>
 </html>
