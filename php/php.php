@@ -81,17 +81,20 @@ $colB = 12 - $colA;
 
     <?php
 
-        $favoriteAnime = 'bobs burgers111111111';
+        $favoriteAnime = 'code geass';
 
         switch($favoriteAnime) {
             case "code geass":
-                echo "obey me";
+     ?>
+        <p>obey me</p>
+        
+     <?php
                 break;
             case 'bobs burgers':
                 print('bobs burgers');
                 break;
             case 'dbz':
-                print('over 9000');
+                print('over 9000 (or 8000??)');
                 break;
             default: 
                 echo " never heard of it";
