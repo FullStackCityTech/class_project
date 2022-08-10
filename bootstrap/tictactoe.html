@@ -71,25 +71,44 @@
         click empty square changes to X or O 
         X changes to O every other turn
         game ends 3 x or o's in a row
+
+        1 && 2 && 3
+
+        123  
+        456  
+        789  
+
+        159  
+        357
+
+        147
+        258
+        369
+
     -->
 
     <script>
         function changeImg( square ) {
+            //var X_numbers = [];  var O_numbers = []; 
+
             var XO = document.getElementById('x_o').value;
             var img;
 
             if(XO == 'x') {
                 XO = 'o';
                 img = 'url(O.jpg)';
+                O_numbers.push(square); 
             }
             else {
                 XO = 'x';
                 img = 'url(X.jpg)';
+                X_numbers.push(square); 
             }
+            console.log('X: ' + X_numbers); console.log('O: ' + O_numbers);
 
             document.getElementById('x_o').value = XO;
 
-            console.log(XO);
+            //console.log(XO);
 
 
             //square is 0 to 8
@@ -100,9 +119,65 @@
             //document.getElementsByClassName('col') = array
              //document.getElementsByClassName('col')[8] 
             document.getElementsByClassName('col')[square].style.backgroundImage = img;
-            document.getElementsByClassName('col')[square].style.backgroundSize = 'cover';
-         
+            document.getElementsByClassName('col')[square].style.backgroundSize = 'cover';         
         }
+
+
+        function updateArray (X_numbers, O_numbers, XO, square) {
+
+            if(XO == 'x') {
+                O_numbers.push(square); 
+            }
+            else {
+                X_numbers.push(square); 
+            }
+
+        }
+
+
+        var X_numbers = [];  var O_numbers = []; 
+
+        /*
+        var XO = 'x';
+        var square = 1;
+
+        updateArray (X_numbers, O_numbers, XO, square); 
+        
+        ///console.log('X: ' + X_numbers); console.log('O: ' + O_numbers);
+
+        square = 2;
+        updateArray (X_numbers, O_numbers, XO, square); 
+
+    
+        square = 3;
+        updateArray (X_numbers, O_numbers, XO, square); 
+
+        console.log('X: ' + X_numbers); console.log('O: ' + O_numbers);
+*/
+
+
+        var countries = []; //empty
+        countries.push('usa');   // ['usa'] 0
+        console.log(countries);
+        
+        countries.push('spain');  //1
+        console.log(countries);
+
+        countries.push('indonesia');  //2
+        console.log(countries);
+
+        countries.pop();
+        console.log(countries);
+
+        countries.pop();
+        console.log(countries);
+
+        countries.pop();
+        console.log(countries);
+        
+        countries.pop();
+        console.log(countries);
+
 
     </script>
 
