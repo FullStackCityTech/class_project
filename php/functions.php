@@ -25,7 +25,10 @@ $power = power_level('en');
 echo $power;
 
 
+$timezone = 'Asia/Tokyo'; 
+date_default_timezone_set($timezone);
 
+echo '<br><br> the time zone is '.$timezone;
 
 echo '<br><br>   the date is: '.date('d j D l m n M F Y y');
 
@@ -33,7 +36,9 @@ echo '<br><br>  '.date('m/d/y');  // 08/12/2022
 
 echo '<br><br> '.date('g G h H i s a A ');
 
-echo '<br><br> '.date('H:i:s a');
+echo '<br><br> '.date('h:i:s a');
+
+echo '<br><br> '.time();
 ?>
 <!DOCTYPE html>
 <html>
