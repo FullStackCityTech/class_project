@@ -1,5 +1,10 @@
 <?php
 
+/**
+ * var name = []
+ * name.length
+ */
+
 $name = array(
     'america/ny', 'america/central', 'america/los_angeles', 'hawaii'
 );
@@ -43,18 +48,23 @@ $hashmap = array( //hashmap
 echo $hashmap[10]; //chicago
 
 
-echo '<br>'.rand(); 
+echo '<br>rand(): '.rand(); 
 
-echo '<br>'.rand() % 10 ;
+echo '<br>range 00-09: '.rand() % 10 ;
 
-echo '<br>'.rand() % 20 ;
+echo '<br>range 00-99: '.rand() % 100 ;
+
+echo '<br>range 00-999: '.rand() % 1000 ;
+
+$random = rand() % 5;
+echo '<br>range 00-04: '. $random ;
 
 
+$names = array(
+    'Stephanie', 'Yash', 'Reagan', 'Erik', 'Orandel'
+);
 
+echo ' random name: '.$names[$random];
 
-/**
- * var name = []
- * name.length
- */
 
 ?>
