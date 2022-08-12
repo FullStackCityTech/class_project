@@ -1,6 +1,37 @@
 <?php
  
+ $hashmap = array( //hashmap
+  'eastern' => 'NY', //key-value pair
+  'central' => 'chicago', //k v 
+  'mountain' => 'nebraska',  
+  'pacific' => 'los angeles',
+  'hk' => 5,
+  10 => 5,
+);
 
+foreach( $hashmap as $tz => $city ){
+  echo ' '.$tz.' '.$city.'<br>';
+}
+
+
+
+$pw = array(
+  'jap' => 8000,
+  'eng' => 9000
+);
+
+foreach ( $pw as $lang => $pow ) { // $array as $key => $value
+  echo ' '.$lang.' '.$pow.'<br>';
+}
+
+ 
+exit; //
+
+
+if($user == 'banned') {
+  echo 'hey **** you banned';
+  exit;
+}
 
 ?>
   
