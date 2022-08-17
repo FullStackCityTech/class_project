@@ -1,10 +1,32 @@
 <?php
 
+error_reporting(0);
+
 if ($_POST) {
     echo '<pre>';
     print_r($_POST);
     echo '</pre>';
+
+  if($_POST['website'] == 'on') {
+    echo "wow that's great  ";
+
+    if($_POST['work'] == 'on') {
+      echo "   even better";
+    }
+    else {
+      echo "   you need to fix it";
+    }
+
+  }
+  else {
+    echo "what a shame";
+  }
+
+echo " ". $_POST['city'];
+
 }
+
+ 
 
 ?>
 
@@ -23,19 +45,19 @@ if ($_POST) {
   <form method="POST">
     <div class="mb-3 row">
          <div class="col-sm-10">
-          <input type="text" class="form-control" name="city" value="">
+          <input type="text" class="form-control" name="city" value="<?php echo $_POST['city'] ?>">
         </div>
       </div>
       <div class="mb-3 row">
          <div class="col-sm-10">
-            <input type="password" class="form-control" name="password">
+            <input type="password" class="form-control" name="password" value="<?php echo $_POST['password'] ?>" >
 
         </div>
       </div>
       <div class="mb-3 row">
          <div class="col-sm-10">
             
-            <input type="radio" name="favorite_number" value="2"> 2
+            <input checked type="radio" name="favorite_number" value="2"> 2
             <input type="radio" name="favorite_number" value="4"> 4
             <input type="radio" name="favorite_number" value="6"> 6 
 
@@ -44,8 +66,8 @@ if ($_POST) {
       <div class="mb-3 row">
          <div class="col-sm-10">
  
-            <input type="checkbox" name="favorite_actor" value="keanu"> Keanu Reeves
-            <input type="checkbox" name="favorite_actor" value="tom"> Tom Cruise
+            <input checked type="checkbox" name="favorite_actor" value="keanu"> Keanu Reeves
+            <input checked type="checkbox" name="favorite_actor" value="tom"> Tom Cruise
             <input type="checkbox" name="favorite_actor" value="brie"> Brie Larson
         </div>
       </div>
@@ -56,13 +78,13 @@ if ($_POST) {
            <select name="second_fav_actor">
                 <option>Keanu Reeves</option>
                 <option>Tom Cruise</option>
-                <option>Brie Larson</option>
+                <option selected>Brie Larson</option>
            </select>
 
            <select name="fav_color">
             <option value="blue">Blue, Aqua, Ocean</option>
             <option value="purple">Fuschia, Magenta, Carmine, Indigo</option>
-            <option value="red">Rose, Crimson</option>
+            <option value="red" selected>Rose, Crimson</option>
             </select>
         </div>
       </div>
@@ -70,9 +92,22 @@ if ($_POST) {
     <div class="mb-3 row">
          <div class="col-sm-10">
 
-            <textarea name="blob_text"></textarea>
+            <textarea name="blob_text"><?php echo $_POST['blob_text'] ?></textarea>
 
             <input type="submit" name="sub" value="Register">
+        </div>
+    </div>
+
+
+    <div class="mb-3 row">
+         <div class="col-sm-10">
+
+          <label>Have your own website?</label>
+            <input type="radio" name="website" > 
+          <br>
+            <label>Does it work</label>
+            <input type="radio" name="work" > 
+         
         </div>
     </div>
 
