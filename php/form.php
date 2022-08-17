@@ -13,7 +13,12 @@ foreach( $hashmap as $tz => $city ){
   echo ' '.$tz.' '.$city.'<br>';
 }
 
+//mailto sms: tel: 
+//aws   ms azure    rackspace   pier1
 
+//shopify  squarespace   wordpress - cms for blogs - plugins - themes
+//wordpress 20% 
+//photoshop - 
 
 $pw = array(
   'jap' => 8000,
@@ -24,7 +29,7 @@ foreach ( $pw as $lang => $pow ) { // $array as $key => $value
   echo ' '.$lang.' '.$pow.'<br>';
 }
 
- 
+
 exit; //
 
 

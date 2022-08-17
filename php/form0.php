@@ -1,4 +1,4 @@
-<?php
+ <?php
 
 if($_POST['form0']) { //empty = false | not empty = true
   echo '<pre>';
