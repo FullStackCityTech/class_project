@@ -1,4 +1,10 @@
 <?php
+session_start(); 
+
+echo '<pre>';
+print_r($_SESSION);
+echo '</pre>';
+
 
 function f1 () {
     echo '('.__FUNCTION__.')';
@@ -20,8 +26,14 @@ function f3 () {
 
 
 
-error_reporting(0); //removes all warnings and notices
-//only shows critical errors
+
+if($_SERVER['SERVER_NAME'] != 'localhost') {
+    error_reporting(0); //removes all warnings and notices
+    //only shows critical errors
+}
+
+
+echo 'warning here: '.$_GET['hhhhhhhhhhhhhh'].' ';
 
 
 $firstLine = __LINE__.' ';
@@ -83,6 +95,8 @@ echo 'SCRIPT_FILENAME: '.$_SERVER['SCRIPT_FILENAME'].'<br>';
 echo 'PHP_SELF: '.$_SERVER['PHP_SELF'].'<br>';
 
 echo 'REQUEST_URI: '.$_SERVER['REQUEST_URI'].'<br>';
+
+echo 'server time: '.date(' m/d/Y  h:i:s A').'<br>';
 
 
 
