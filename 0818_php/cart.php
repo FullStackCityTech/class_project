@@ -96,10 +96,11 @@ echo 'PHP_SELF: '.$_SERVER['PHP_SELF'].'<br>';
 
 echo 'REQUEST_URI: '.$_SERVER['REQUEST_URI'].'<br>';
 
+echo 'your ip address: '.$_SERVER['REMOTE_ADDR'].'';
+
 echo 'server time: '.date(' m/d/Y  h:i:s A').'<br>';
 
-
-
+ 
 ?>
 
 <pre>formats text</pre>
