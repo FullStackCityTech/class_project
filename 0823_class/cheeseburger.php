@@ -4,7 +4,7 @@ include('menu.php');
 
 ?>
 
-cheeseburger
+<a href="cart.php?name=cheeseburger">Add to Cart</a>
 
 <?php
 include('footer.html');

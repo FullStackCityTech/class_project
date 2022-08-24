@@ -1,5 +1,9 @@
 <?php
 session_start();
+
+date_default_timezone_set('America/Los_Angeles');
+
+error_reporting(0);
 ?>
 
 <!DOCTYPE html>
@@ -28,6 +32,7 @@ session_start();
             -o-background-size: cover;
             background-size: cover;
             font-family: 'Montserrat', sans-serif;
+            font-size: 22px;
         }
 
         .navbar {
@@ -68,6 +73,8 @@ session_start();
 
         a {
             text-decoration: none;
+            color: white;
+            font-weight: bold;
         }
 
         li {
@@ -201,6 +208,7 @@ session_start();
                 <li><a href="hamburger.php">hamburger</a></li>
                 <li><a href="cheeseburger.php">cheeseburger</a></li>
 
+                <li><a href="cart.php">view cart</a></li>
             </div>
         </ul>
     </nav>
