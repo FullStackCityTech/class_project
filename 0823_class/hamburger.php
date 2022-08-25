@@ -34,9 +34,7 @@ $search = str_replace("f", "1", $search);
 
 $search = str_replace("g", "2", $search);
 
-
 $search = str_replace("oo", "3", $search);
-
 
 $search = str_replace(" ", "-", $search);
 

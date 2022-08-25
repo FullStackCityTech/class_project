@@ -1,0 +1,91 @@
+* {
+    margin: 2px;
+}
+
+body {
+    font-size: 24px;
+    color: rgb(38, 34, 34);
+    height: 100vh;
+    text-align: center; 
+/*    display: flex;
+    flex-direction: column;*/
+}
+
+.flex-header {
+    background-color: rgb(197, 57, 150);
+    padding-top: 3rem;
+}
+
+.flex-main {
+    background-color: orange;
+    display: flex;
+    flex: 1;
+}
+
+.flex-nav {
+    flex: 1 1 5rem;
+}
+
+.flex-aside {
+    flex: 1 1 5rem;
+} 
+
+.flex-article {
+    background-color: rgb(172, 123, 33);
+    flex: 3 3;
+}
+
+.flex-footer {
+    background-color: rgb(35, 206, 163);
+}
+
+@media all and (max-width: 540px) {
+    .flex-main {
+        flex-direction: column;
+    }
+}
+
+.container {
+    border: 6px solid black;
+    display: inline-flex;
+    display: flex;
+    height: 90%;
+}
+
+.flex-item {
+    flex-grow: 1;
+}
+
+.item-1 {
+    background-color: blueviolet;
+    order: 4;
+}
+
+.item-2 {
+    background-color: rgb(77, 45, 107);
+    order: 4;
+}
+
+.item-3 {
+    background-color: rgb(81, 134, 183);
+    order: 3;
+}
+
+.item-4 {
+    background-color: rgb(151, 69, 122);
+    order: 3;
+    flex-grow: 2;
+}
+
+.item-5 {
+    background-color: rgb(67, 179, 52);
+    flex-grow: 1; /* 1 = fill all space 
+    other elements have 1 = share space evenly 
+    ratio */
+
+}
+
+.item-6 {
+    background-color: rgb(183, 127, 81);
+    flex-grow: 2; 
+}
