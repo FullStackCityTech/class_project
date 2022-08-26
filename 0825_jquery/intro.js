@@ -93,4 +93,6 @@ $(document).ready(function () {
     $('#addGreen').removeClass('underline');
 
     $('#addGreen').remove();
+
+    $('.accordionItemHeaders');
 });
