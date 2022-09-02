@@ -22,6 +22,8 @@ echo ' ||| '.   date('m/d/Y'). ' '.date('h A').' ||| ';
     }
 }
 
+//html css bash js jquery php mysql
+
 ?>
 
 <!DOCTYPE html>
