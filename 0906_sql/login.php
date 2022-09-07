@@ -60,6 +60,9 @@ if ($_SESSION) { //logged in
 <style>
 #form {
     text-align: center;
+    border: 1px solid black; 
+    width: 40%;
+    margin: auto;
 }
 
 .field {
@@ -89,7 +92,9 @@ input[type="submit"]:hover {
     text-transform: UPPERCASE;
     font-size: 16px;
     font-weight: bold;
+    margin-bottom: 20px;
 }
+ 
 
 </style>
 

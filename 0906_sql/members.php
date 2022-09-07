@@ -16,14 +16,16 @@ if ($_POST['logout']) {
     header("Location: login.php"); //redirect
 }
 
+//UPDATE db & session
+
 ?>
 
 <style>
 
 #logout {
-    text-align: right;
+    text-align: left;
     position: absolute;
-    right: 0; top: 0;
+    left: 0; top: 0;
 }
 
 </style>
@@ -38,6 +40,14 @@ if ($_POST['logout']) {
     </form>
     </div>
 
+    <h1>Welcome, <?php echo $_SESSION['username'] ?></h1>
+
+    <form method="POST">
+    <input type="text" name="username" placeholder="Username" class="field"> <br>
+    <input type="password" name="password" placeholder="Password" class="field"> <br />
+    <input type="password" name="password2" placeholder="Repeat Password" class="field">
+     <br />      <input type="submit" value="Update" name="update">  
+    </form>
 <?php
     } //if
 ?>
