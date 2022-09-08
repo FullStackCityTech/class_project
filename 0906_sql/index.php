@@ -1,18 +1,5 @@
 <?php
 include("config.php");
- 
-$mysqli = new mysqli($host, $username, $password, $dbname);
-//connection object
-
-// Check connection
-if ($mysqli -> connect_errno) {
-  echo "Failed to connect to MySQL: " . $mysqli -> connect_error;
-  exit();
-}
-else {
-    echo "connect successful";
-}
-
 
 
 // Perform query

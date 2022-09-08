@@ -1,35 +1,16 @@
 <?php
+include('config.php');
+
 session_start();
 error_reporting(0);
+ 
 
-$db_host = "localhost:3307";
-$db_user = 'root';
-$db_pass = '';
-$db_name = 'login';
-
-$conn = new mysqli($db_host, $db_user, $db_pass, $db_name);
-
-
-// Check connection
-if ($conn -> connect_errno) {
-    echo "Failed to connect to MySQL: " . $conn -> connect_error;
-    exit();
-  }
-  else {
-      echo " db connect successful";
-  }
-
-
-  
-
-//$username = '1111';
-//$password = '2222';
 
 if($_POST['login']) {
     //echo $_POST['username'].' '.$_POST['password'];
 
     $getUsers = "SELECT * FROM users ORDER BY username";
-    $result = $conn -> query($getUsers);
+    $result = $mysqli -> query($getUsers);
   
     while ($row = $result -> fetch_assoc()) {
       //echo " ".$row['username']." ".$row['password']."<br> ";
@@ -38,6 +19,7 @@ if($_POST['login']) {
         if($_POST['username'] == $row['username'] && $_POST['password'] == $row['password']) {
             $_SESSION['username'] = $row['username'];
             $_SESSION['password'] = $row['password'];
+            $_SESSION['id'] = $row['id'];
     
             header("Location: members.php"); //redirect
         } 
