@@ -15,8 +15,10 @@ if($_POST['login']) {
     while ($row = $result -> fetch_assoc()) {
       //echo " ".$row['username']." ".$row['password']."<br> ";
 
+        $encrypted_pw = crypt($_POST['password'], SALT); //salt
+
         //match username & password - add to php session
-        if($_POST['username'] == $row['username'] && $_POST['password'] == $row['password']) {
+        if($_POST['username'] == $row['username'] && $encrypted_pw == $row['password']) {
             $_SESSION['username'] = $row['username'];
             $_SESSION['password'] = $row['password'];
             $_SESSION['id'] = $row['id'];
@@ -56,14 +58,14 @@ if ($_SESSION) { //logged in
     background-color:rgb(217, 245, 188);
 }
 
-input[type="submit"] {
+.grayButton {
     border: 1px solid black;
     height: 40px; 
     width: 100px;
     font-size: 18px;
 }
 
-input[type="submit"]:hover {
+.grayButton:hover {
     cursor: pointer;
     background-color: #afa9a9;
     color: white;
@@ -87,6 +89,7 @@ input[type="submit"]:hover {
     <span id="message"><?php echo $message ?></span> <br>
     <input type="text" name="username" placeholder="Username" class="field"> <br>
     <input type="password" name="password" placeholder="Password" class="field"> <br />
-    <input type="submit" value="Login" name="login">  
+    <input type="submit" value="Login" name="login" class="grayButton">  
+    <a href="index.php"><input type="button" value="Register" class="grayButton" ></a>
 </form>
 </div>
