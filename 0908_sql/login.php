@@ -2,7 +2,7 @@
 include('config.php');
 
 session_start();
-error_reporting(0);
+error_reporting(0); //0000
  
 
 
@@ -15,13 +15,18 @@ if($_POST['login']) {
     while ($row = $result -> fetch_assoc()) {
       //echo " ".$row['username']." ".$row['password']."<br> ";
 
-        $encrypted_pw = crypt($_POST['password'], SALT); //salt
+        $encrypted_pw = hash('sha512', $_POST['password']); 
 
         //match username & password - add to php session
         if($_POST['username'] == $row['username'] && $encrypted_pw == $row['password']) {
             $_SESSION['username'] = $row['username'];
             $_SESSION['password'] = $row['password'];
             $_SESSION['id'] = $row['id'];
+            $_SESSION['level'] = $row['level'];
+
+            if($row['level'] == 'B') {
+                die(" You are banned ");
+            }
     
             header("Location: members.php"); //redirect
         } 

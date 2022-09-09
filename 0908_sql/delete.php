@@ -4,6 +4,15 @@ include('config.php');
 session_start();
 error_reporting(0);
 
+if($_SESSION['level'] != 'A') {
+   // echo " You shouldn't be here ";
+    die(" You shouldn't be here ");
+   // exit;
+}
+else {
+    echo "You're an admin ";
+}
+
 
 //DELETE FROM users WHERE id=......
 if($_POST['delete']) {
@@ -14,7 +23,6 @@ if($_POST['delete']) {
     else {
         $message = ' successfully deleted id#'.$_POST['id'];
     }
-
 }
 
 

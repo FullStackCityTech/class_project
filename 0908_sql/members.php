@@ -27,7 +27,9 @@ if($_POST['update']) {
         
         //update query UPDATE users SET (username='' ,password='') WHERE id=  $_SESSION['id']
 
-        $update = "UPDATE users SET username='".$_POST['username']."' , password='".$_POST['password']."' WHERE id=".$_SESSION['id'];
+        $encrypted_pw = hash('sha512', $_POST['password']); 
+
+        $update = "UPDATE users SET username='".$_POST['username']."' , password='".$encrypted_pw."' WHERE id=".$_SESSION['id'];
 
         if(!$mysqli -> query($update)) {
             echo("Error description: " . $mysqli -> error);

@@ -26,7 +26,7 @@ if($_POST['insert']) {
             else { //passwords match
 
                 //encrypt pw
-                $encrypted_pw = crypt($_POST['password'], SALT); //salt
+                $encrypted_pw = hash('sha512', $_POST['password']);
 
                 $insert = "INSERT INTO users (username, password) VALUES (  '".$_POST['username']."', '".$encrypted_pw."'  )  ";
     
@@ -39,6 +39,7 @@ if($_POST['insert']) {
                     $_SESSION['username'] = $_POST['username']; 
                     $_SESSION['password'] = $encrypted_pw; 
                     $_SESSION['id'] = $mysqli -> insert_id; //insert_id is the id of auto_increment field
+                  
             
                     header("Location: members.php"); 
                 } 
