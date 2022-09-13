@@ -2,7 +2,7 @@
 include('config.php');
 
 session_start();
-error_reporting(0); //0000
+error_reporting(0); //benjamin 0000
  
 
 
@@ -25,10 +25,11 @@ if($_POST['login']) {
             $_SESSION['level'] = $row['level'];
 
             if($row['level'] == 'B') {
-                die(" You are banned ");
+                header("Location: index.php?banned=1");
+                //exit;
             }
-    
-            header("Location: members.php"); //redirect
+            else 
+                header("Location: ./?page=members"); //redirect
         } 
         else {
             $message = " wrong username or password";
@@ -95,6 +96,7 @@ if ($_SESSION) { //logged in
     <input type="text" name="username" placeholder="Username" class="field"> <br>
     <input type="password" name="password" placeholder="Password" class="field"> <br />
     <input type="submit" value="Login" name="login" class="grayButton">  
-    <a href="index.php"><input type="button" value="Register" class="grayButton" ></a>
+    
+    <a href="./?page=register"><input type="button" value="Register" class="grayButton" ></a>
 </form>
 </div>

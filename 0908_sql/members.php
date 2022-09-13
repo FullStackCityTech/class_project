@@ -13,9 +13,8 @@ if ($_POST['logout']) {
 
     unset($_SESSION['username']);
     unset($_SESSION['password']);
-    echo " logged out ";
-//    print_r($_SESSION);
-    header("Location: login.php"); //redirect
+    echo " logged out "; 
+    header("Location: ./?page=login"); //redirect
 }
 
 //UPDATE db & session
