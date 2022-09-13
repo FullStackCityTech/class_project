@@ -1,8 +1,12 @@
 <?php
-//benjamin 0000 | user3 bbbbbb
-//main menu - switch login/logout button
-//update redir for banned members 
 
+session_start();
+error_reporting(0);
+
+echo "before unset"; 
+print_r($_SESSION);
+ 
+//benjamin 0000 | user3 bbbbbb
 
 if( isset($_GET['page'])) {
 
@@ -12,9 +16,25 @@ if( isset($_GET['page'])) {
             break;
         
         case 'members':
+            //print_r($_SESSION);  
             include('members.php');
             break;
 
+        case 'logout': 
+            session_destroy();
+            
+            //unset($_SESSION);
+            /*
+            foreach($_SESSION as $key => $v){
+                //echo $_SESSION[$key].' ';
+                unset($_SESSION[$key]);
+            }
+*/
+            
+//echo "after unset"; 
+            print_r($_SESSION);
+
+  
         default:
             include('login.php');
     }
@@ -23,9 +43,15 @@ else {
     include('login.php');
 }
 
+if( isset($_SESSION) ) {
+    $logInOrOut = '<a href="./?page=logout">Logout</a>';
+}
+else {
+    $logInOrOut = '<a href="./?page=login">Login</a>';
+}
+
+
 ?>
-
-
 <style>
 
 #menu {
@@ -55,7 +81,8 @@ else {
 
 <div id="menu">
     <ul>
-        <li> <a href="./?page=login">Login</a></li>
+        <li> <?php echo $logInOrOut ?></li>
+
         <li> <a href="./?page=register">Register</a></li>
         <li> <a href="./?page=members">Members</a></li>
     </ul>

@@ -1,13 +1,17 @@
 <?php
 include('config.php');
+ 
+if($_GET['banned'] == 1) {
+    die("You are banned");
+}
 
-session_start();
-error_reporting(0); //benjamin 0000
+
+print_r($_SESSION);
  
 
 
 if($_POST['login']) {
-    //echo $_POST['username'].' '.$_POST['password'];
+    echo __LINE__.' '; 
 
     $getUsers = "SELECT * FROM users ORDER BY username";
     $result = $mysqli -> query($getUsers);
@@ -25,11 +29,16 @@ if($_POST['login']) {
             $_SESSION['level'] = $row['level'];
 
             if($row['level'] == 'B') {
-                header("Location: index.php?banned=1");
+                echo __LINE__.' '; 
+                header("Location: ./?banned=1");
                 //exit;
             }
-            else 
+            else {
+                //print_r($_SESSION); exit;
+
                 header("Location: ./?page=members"); //redirect
+            }
+                
         } 
         else {
             $message = " wrong username or password";
@@ -42,9 +51,7 @@ if($_POST['login']) {
 
 
 
-if ($_SESSION) { //logged in
-    print_r($_SESSION);
-}
+
 
 ?>
 <style>
@@ -91,7 +98,7 @@ if ($_SESSION) { //logged in
 
 
 <div id="form">
-<form method="POST">
+<form method="POST" action="./">
     <span id="message"><?php echo $message ?></span> <br>
     <input type="text" name="username" placeholder="Username" class="field"> <br>
     <input type="password" name="password" placeholder="Password" class="field"> <br />

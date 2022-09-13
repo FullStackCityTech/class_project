@@ -1,22 +1,14 @@
 <?php
 include('config.php');
-
-session_start();
-error_reporting(0);
-
-if ($_SESSION) { //logged in
-    print_r($_SESSION);
-}
+ 
+ 
+ print_r($_SESSION);
+ 
 
 
-if ($_POST['logout']) {
 
-    unset($_SESSION['username']);
-    unset($_SESSION['password']);
-    echo " logged out "; 
-    header("Location: ./?page=login"); //redirect
-}
-
+echo __LINE__.' '; 
+ 
 //UPDATE db & session
 if($_POST['update']) {
 
@@ -58,13 +50,10 @@ if($_POST['update']) {
 
 <?php
     if($_SESSION) {
+        echo __LINE__.' '; 
 ?>
 
-    <div id="logout">
-    <form method="POST">
-        <input type="submit" name="logout" value="Logout">
-    </form>
-    </div>
+    
 
     <h1>Welcome, <?php echo $_SESSION['username'] ?></h1>
 
