@@ -9,6 +9,9 @@ if(  isset($_GET['goto'])  ) { //isset()
         case 'page2': 
             include('page2.php'); exit;
             break;
+        case 'export':
+            include('export_csv.php'); exit; 
+            break; 
     }
 }
 
