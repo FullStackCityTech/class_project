@@ -43,16 +43,8 @@ if($_POST['login']) {
         else {
             $message = " wrong username or password";
         }
-
-    }
-   
+    }  
 }
-
-
-
-
-
-
 ?>
 <style>
 #form {

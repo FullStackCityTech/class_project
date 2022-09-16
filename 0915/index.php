@@ -31,6 +31,7 @@ if(in_array($needle, $acceptedImageTypes)){
 
 echo '<pre>';
 print_r($_FILES['imageFile']); 
+//globals $_POST $_SESSION $_SERVER
 echo '</pre>';
 
 $target_dir = "uploads/";
@@ -38,7 +39,7 @@ $target_file = $target_dir . basename($_FILES["imageFile"]["name"]);
 
 $imageFileType = strtolower(pathinfo($target_file,PATHINFO_EXTENSION));
 
-// Check if image file is a actual image or fake image
+
 if(isset($_POST["submit"])) {
      
     $error = 0;
@@ -50,7 +51,7 @@ if(isset($_POST["submit"])) {
 
     // Check file size
     if ($_FILES["imageFile"]["size"] > 500000) {
-        echo "Sorry, your file is too large.";
+        echo " Sorry, your file is too large.";
        $error = 1;
     }
     else {
@@ -65,7 +66,7 @@ if(isset($_POST["submit"])) {
 
     if($error == 0)
     if (move_uploaded_file($_FILES["imageFile"]["tmp_name"], $target_file)) {
-        echo "The file ". htmlspecialchars( basename( $_FILES["fileToUpload"]["name"])). " has been uploaded.";
+        echo " The file ". htmlspecialchars( basename( $_FILES["imageFile"]["name"])). " has been uploaded.";
     }  
 }
 
