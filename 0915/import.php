@@ -26,7 +26,19 @@ while (($data = fgetcsv($file, 1000, ",")) !== FALSE) {
     }
     echo "</p>";
 
+  //  echo "INSERT INTO new_users ('username', 'password', 'state') VALUES (
+//        '$data[0]', '$data[1]', '$data[2]'
+   // ) ";
+
+    echo $query = "INSERT INTO `new_users`(`username`, `password`, `state`) VALUES (
+       '$data[0]', '$data[1]', '$data[2]'
+        )";
+
+    print "<br>";
     
+    if(!$db -> query($query)) {
+        echo("Error description: " . $db -> error);
+    }
 
 }
 
