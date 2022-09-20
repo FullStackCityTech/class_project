@@ -39,7 +39,6 @@ while (($data = fgetcsv($file, 1000, ",")) !== FALSE) {
     if(!$db -> query($query)) {
         echo("Error description: " . $db -> error);
     }
-
 }
 
 fclose($file);

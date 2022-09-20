@@ -1,7 +1,8 @@
 <?php
 error_reporting(0);
 
-// echo strtolower("FFGJRJKFVKBFFKMKFMKKMKFMKVMF");
+// $_FILES $_SESSION $_POST $_GET $_SERVER 
+// __FILE__ __LINE__ __DIR__  
 
 $haystack = array(
     "chest", "triceps", "legs", "shoulders", "back", "abs" 
@@ -50,7 +51,7 @@ if(isset($_POST["submit"])) {
     }
 
     // Check file size
-    if ($_FILES["imageFile"]["size"] > 500000) {
+    if ($_FILES["imageFile"]["size"] > 100000) { //500000 = 500kb
         echo " Sorry, your file is too large.";
        $error = 1;
     }
@@ -68,7 +69,9 @@ if(isset($_POST["submit"])) {
     if (move_uploaded_file($_FILES["imageFile"]["tmp_name"], $target_file)) {
         echo " The file ". htmlspecialchars( basename( $_FILES["imageFile"]["name"])). " has been uploaded.";
     }  
-}
+
+} //
+
 
 ?>
 <!DOCTYPE html>

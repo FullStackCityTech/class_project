@@ -1,9 +1,9 @@
 <?php
-//classes objects
+//classes objects - object oriented programming 
 class Car {
  
    public $wheels = 4; 
-   public $brand = "Honda";
+   public $brand = "Honda"; //members 
 
     public function drive() { //methods
         echo "Car - drive() - # of wheels: ".$this -> wheels;
