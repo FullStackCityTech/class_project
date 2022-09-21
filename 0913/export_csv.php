@@ -8,6 +8,7 @@ $dbname = "login";
 $mysqli = new mysqli( $host, $username, $password, $dbname ); 
 
 
+
 // Check connection
 if ($mysqli -> connect_errno) {
   echo "Failed to connect to MySQL: " . $mysqli -> connect_error;
@@ -53,5 +54,7 @@ $string = "01234567890123456789012345678901234567890123456789";
 $string = substr($string,5,35);
 
 echo $string;
+
+select all posts order by date 
 */
 ?>

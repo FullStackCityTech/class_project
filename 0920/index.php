@@ -23,3 +23,21 @@ switch ($uri[3]) {
         require __DIR__ . '/404.php';
         break;
 }
+
+
+
+$directory = './';
+if ($handle = opendir($directory))   //read all files in directory
+{   
+    echo ' this dir:  ';
+    //List all the files
+    while (false !== ($file = readdir($handle)))
+    {
+       // echo ' '.$file.' ';
+        $ext = strtolower(pathinfo($file,PATHINFO_EXTENSION));
+        echo ' '.$ext.' ';
+    }//while
+    closedir($handle);
+
+}//if
+?>
