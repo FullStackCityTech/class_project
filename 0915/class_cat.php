@@ -1,7 +1,7 @@
 <?php
 class Cat {
 
-    public $paws; 
+    public $paws; //members
     public $speed;
     public $stamina;
     public $tail;
@@ -14,7 +14,7 @@ class Cat {
         $this->tail = 10;
     }
 
-    public function show_cat() {
+    public function show_cat() { //methods
         print "paws:". $this->paws ." speed: ". $this->speed." stamina: ". $this->stamina." tail: ". $this->tail." <br>"; 
     }
 

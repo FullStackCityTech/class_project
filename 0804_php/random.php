@@ -7,15 +7,15 @@ $num100 = rand() % 100 + 1;
 
 //echo '<p>random number 1-100: '.$num100.'</p>';
 
-$num4 = rand() % 5;
+$num4 = rand() % 3;
 
 
 //random name
 $names = array(
-    'Stephanie', 'Yash', 'Reagan', 'Erik', 'Orandel'
+    'Stephanie', 'Erik', 'Orandel'
 );
 
-echo '<p>random number 1-5: <span id="bigNumber">'.$num4.'</span> random name: <span id="bigNumber">'.$names[$num4].'</span></p>';
+echo '<p>random number 1-3: <span id="bigNumber">'.$num4.'</span> random name: <span id="bigNumber">'.$names[$num4].'</span></p>';
 ?>
 <style>
     #bigNumber {
