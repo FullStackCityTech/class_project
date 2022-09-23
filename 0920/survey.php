@@ -1,6 +1,34 @@
+<?php
+$host = 'localhost:3307';
+$username = 'root';
+$password = '';
+$server = 'survey';
+
+$mysqli = new mysqli($host, $username, $password, $server);
+
+$user_id = rand() % 5;
+ 
+
+//topics goal level howLong 
+if($_POST['submit']) {
+
+    echo '<pre>'; print_r($_POST); echo '</pre>';
+
+
+    $myJSON = json_encode($POST['goals']);
+
+    echo $myJSON;
+
+    $query = 'INSERT INTO survey () VALUES ()';
+
+}
+
+
+
+?>
+
 <!DOCTYPE html>
 <html>
-
 <head>
     <meta charset='utf-8'>
     <meta http-equiv='X-UA-Compatible' content='IE=edge'>
@@ -16,14 +44,12 @@
         crossorigin="anonymous"></script>
 
     <style>
-
 .form-check .form-check-input {
     float: none !important;
 }
     </style>
 
 </head>
-
 <body>
 
     <div class="container">
@@ -32,13 +58,13 @@
 
                 <form method="POST">
                     <h1 class="text-center">Student Survey</h1>
-                    <div class="mb-3  text-center">
+                    <div class="mb-3 text-center">
                         <label for="" class="form-label">How long have you been studying English? </label>
-                        <input type="text" class="form-control" id="howLong" placeholder="">
+                        <input type="text" class="form-control" name="howLong" placeholder="">
                     </div>
-                   
-           
+                              
 <label class="form-label">What is your English level?</label>         
+
 <?php
 function englishLevelRadioButton($level) {
 
@@ -60,14 +86,17 @@ foreach($levelsArray as $level) {
 }
 ?>
 
+<p>&nbsp;</p>
+
 <label class="form-label">What are your goals?</label>
+
 <?php
 
 function goalsCheckBox($goal, $desc) {
     $value = strtolower($goal); //Listening - listening
 
     return '<div class="form-check form-check">
-    <input class="form-check-input" type="checkbox" id="goal" value="'.$value.'">
+    <input class="form-check-input" type="checkbox" name="goal[]" value="'.$value.'">
     <label class="form-check-label">'.$goal.' - '.$desc.'</label>
   </div>';
 }
@@ -86,25 +115,23 @@ foreach($goalsArray as $goal => $desc) {
 
 ?>
 
+<p>&nbsp;</p> 
 
-              
+<label>Do you want to focus on specific topics?</label>
+<div class="form-floating">
+  
+  <textarea class="form-control" placeholder="" id="floatingTextarea" name=
+  "topics"></textarea>
+  <label for="floatingTextarea">Ex. food, travel, culture, movies, technology, etc
+    </label>
+</div>
+
+<input type="submit" name="submit" class="btn btn-primary" value="Submit Form">
 
                 </form>
             </div>
         </div>
     </div>
-
-
-
  
-
-
-    Do you want to focus on specific topics?
-    Ex. food, travel, culture, movies, technology, etc
-
-    textarea
-
-
 </body>
-
 </html>
