@@ -1,6 +1,6 @@
 <?php
 
-$request = $_SERVER['REQUEST_URI'];
+$request = $_SERVER['REQUEST_URI']; 
 
 //echo '<pre>'; print_r($_SERVER); echo '</pre>';   
 echo $request; 
@@ -17,6 +17,9 @@ switch ($uri[3]) {
         break;
     case 'about':
         require __DIR__ . '/about.php';
+        break;
+    case 'survey':
+        require __DIR__. '/survey.php';
         break;
     default:
         http_response_code(404);

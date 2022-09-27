@@ -15,9 +15,13 @@ if($_POST['submit']) {
     echo '<pre>'; print_r($_POST); echo '</pre>';
 
 
-    $myJSON = json_encode($POST['goals']);
+    $myJSON = json_encode($_POST['goal']);
 
     echo $myJSON;
+
+    $decode = json_decode($myJSON);
+
+    echo '<pre>'; print_r($decode); echo '</pre>';
 
     $query = 'INSERT INTO survey () VALUES ()';
 
