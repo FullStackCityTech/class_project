@@ -6,24 +6,57 @@ $server = 'survey';
 
 $mysqli = new mysqli($host, $username, $password, $server);
 
-$user_id = rand() % 5;
+$user_id = rand() % 5000;
  
 
-//topics goal level howLong 
+//topic goal level howLong 
 if($_POST['submit']) {
 
     echo '<pre>'; print_r($_POST); echo '</pre>';
 
+    // $_POST['goal'] //array
+/* 
+    $goalJson = json_encode($_POST['goal']);
 
-    $myJSON = json_encode($_POST['goal']);
+    // echo $goalJson.' ';
 
-    echo $myJSON;
+    //////////////////// howLong \\\\\\\\\\\\\\\\\\\\\\\\\\\
+    $queryH = "INSERT INTO survey (question, answer) VALUES 
+    ('howLong', '".$_POST['howLong']."')";
 
-    $decode = json_decode($myJSON);
+    print $queryH.'<br>'; 
 
-    echo '<pre>'; print_r($decode); echo '</pre>';
+    if(!$mysqli -> query($queryH)) {
+        echo("Error description: " . $mysqli -> error);
+    }
 
-    $query = 'INSERT INTO survey () VALUES ()';
+    //////////////////// level \\\\\\\\\\\\\\\\\\\\\\\\\\\
+    $queryL = "INSERT INTO survey (question, answer) VALUES 
+    ('level', '".$_POST['level']."')";
+
+    print $queryL."<br>";
+
+    if(!$mysqli -> query($queryL)) {
+        echo("Error description: " . $mysqli -> error);
+    }
+
+*/
+
+    unset($_POST['submit']);
+
+    $postJson = json_encode($_POST);
+
+    echo '<pre>'; print_r($postJson); echo '</pre>';
+
+
+    $queryT = "INSERT INTO survey (user_id, answer) VALUES 
+    ('".$user_id."', '".$postJson."')";
+
+    print $queryT."<br>";
+
+    if(!$mysqli -> query($queryT)) {
+        echo("Error description: " . $mysqli -> error);
+    }
 
 }
 
@@ -125,7 +158,7 @@ foreach($goalsArray as $goal => $desc) {
 <div class="form-floating">
   
   <textarea class="form-control" placeholder="" id="floatingTextarea" name=
-  "topics"></textarea>
+  "topic"></textarea>
   <label for="floatingTextarea">Ex. food, travel, culture, movies, technology, etc
     </label>
 </div>
