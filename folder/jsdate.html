@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Page Title</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    <script src='main.js'></script>
+</head>
+
+<body>
+    <div id="demo">
+
+    </div>
+
+    <select id="state"></select>
+
+    <script>
+        const d = new Date();
+        document.getElementById("demo").innerHTML = d;
+
+        const d1 = new Date(123123125555);
+        document.getElementById("demo").innerHTML = d1;
+
+        const d2 = new Date(); 
+        document.getElementById("demo").innerHTML = d2.toString();
+
+        var state = document.getElementById('state');
+        console.log(state);
+        state.innerHTML = '<option>ny</option><option>nj</option>'
+    </script>
+</body>
+
+</html>

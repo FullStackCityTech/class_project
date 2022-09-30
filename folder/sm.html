@@ -1,0 +1,53 @@
+ <!DOCTYPE html>
+ <html>
+ <head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Page Title</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+ 
+ </head>
+ <body>
+    
+
+<img src="glass_2.jpg"  name="cat" onmouseover="cat.src='glass_3.jpg'" 
+onmouseout="cat.src='glass_2.jpg'">
+
+<img src="blue.jpg"  name="blue" onmouseover="blue.src='glass_1.jpg'" 
+onmouseout="blue.src='blue.jpg'">
+ 
+<p>fogofgkofkofbkofmkgofkg</p>
+    
+
+<p class="summary">76586956956596654</p>
+<p class="summary">454555151</p>
+<p class="summary">4551848556261</p>
+
+<script>
+   //var catObject = document.getElementById('cat');
+   var imgArray = document.getElementsByTagName('img');
+   
+imgArray[0].style.width="100px";
+imgArray[1].style.width="100px";
+//imgArray[2].style.width="100px";
+
+   var arr = [00, 11, 22, 33];
+   arr[0]; arr[1];
+
+
+  //cat.style.width = "300px";
+   console.log(imgArray);
+
+   var sum = document.getElementsByClassName("summary");
+
+   for(var s = 0; s < sum.length;s++){
+      console.log( sum[s] );
+
+      var sumContent = sum[s].innerHTML + ' written by ___'; 
+
+      sum[s].innerHTML = sumContent;
+   }
+
+</script>
+</body>
+ </html>

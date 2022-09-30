@@ -1,0 +1,46 @@
+<html>
+<head>
+    <script src="https://code.jquery.com/jquery-1.9.1.min.js"></script>
+    
+    <script>
+    $( document ).ready(function() {
+        console.log( "document loaded" );
+
+
+        $('h1').hide();
+
+        
+
+        $('button').click(function(){
+            $('h1').show();
+            
+            console.log( "You clicked a paragraph!" );
+        });
+
+        $('input[type="button"]').click(function(){
+            $('h1').hide();
+            
+            console.log( "You clicked a paragraph!" );
+        });
+
+
+        $( "p" ).click(function() {
+            console.log( "You clicked a paragraph!" );
+        });
+
+
+    });
+  
+
+    </script>
+</head>
+<body> 
+    <div id="container">
+        <h1>hi hi hi h1</h1>
+
+        <button>click me</button> 
+        <input type="button" value="hide me">
+    </div>
+
+</body>
+</html>
